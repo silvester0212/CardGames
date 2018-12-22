@@ -1,3 +1,5 @@
+package Generic;
+
 /**
  * Class Suit
  * Define the Suit of a Card
@@ -54,12 +56,16 @@ public class Suit {
         return this.suit == ((Suit) obj).suit;
     }
 
+    /**
+     * Overrides clone method
+     * @return a new Suit object that equals to current Suit object
+     */
     public Suit clone() {
         return new Suit(this.suit);
     }
 
     /**
-     * Ovverrides toString method
+     * Overrides toString method
      * @return a string representation of suit
      */
     public String toString() {

@@ -1,4 +1,6 @@
+import Generic.GameFactory;
 import org.junit.jupiter.api.Test;
+import Generic.Suit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -21,6 +23,7 @@ class SuitTest {
         assertNotEquals(spade, 3);
         assertNotEquals(spade, 'c');
         assertEquals(spade, new Suit(Suit.SuitEnum.SPADE));
+        assertEquals(spade, GameFactory.makeSpadeSuit());
         assertEquals(spade, new Suit(spade.hashCode()));
 
         // Test Spade Clone
@@ -49,6 +52,7 @@ class SuitTest {
         assertNotEquals(club, 3);
         assertNotEquals(club, 'c');
         assertEquals(club, new Suit(Suit.SuitEnum.CLUB));
+        assertEquals(club, GameFactory.makeClubSuit());
         assertEquals(club, new Suit(club.hashCode()));
 
         // Test Club Clone
@@ -77,6 +81,7 @@ class SuitTest {
         assertNotEquals(diamond, 3);
         assertNotEquals(diamond, 'c');
         assertEquals(diamond, new Suit(Suit.SuitEnum.DIAMOND));
+        assertEquals(diamond, GameFactory.makeDiamondSuit());
         assertEquals(diamond, new Suit(diamond.hashCode()));
 
         // Test Diamond Clone
@@ -105,6 +110,7 @@ class SuitTest {
         assertNotEquals(heart, 3);
         assertNotEquals(heart, 'c');
         assertEquals(heart, new Suit(Suit.SuitEnum.HEART));
+        assertEquals(heart, GameFactory.makeHeartSuit());
         assertEquals(heart, new Suit(heart.hashCode()));
 
         // Test Spade Clone
