@@ -1,3 +1,5 @@
+package Generic;
+
 import Generic.GameFactory;
 import org.junit.jupiter.api.Test;
 import Generic.Suit;
