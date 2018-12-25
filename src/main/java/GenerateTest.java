@@ -1,5 +1,3 @@
-package Generic;
-
 public class GenerateTest {
     public static void main(String[] args) {
         // Rank Tests

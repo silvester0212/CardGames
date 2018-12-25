@@ -132,6 +132,7 @@ class SuitTest {
     @Test
     void ExceptionsTest() {
         assertThrows(IllegalArgumentException.class, () -> {Suit illegalSuit = new Suit (-1);}, "Suit Index out of bound, must be bewteen 0 to 3.");
+        assertThrows(IllegalArgumentException.class, () -> {Suit illegalSuit = new Suit (4);}, "Suit Index out of bound, must be bewteen 0 to 3.");
         System.out.println("Suit Exception tests passed");
     }
 }
