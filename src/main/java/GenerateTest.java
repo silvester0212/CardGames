@@ -2,6 +2,27 @@ public class GenerateTest {
     public static void main(String[] args) {
         // Rank Tests
         generateRankTest();
+
+        // Factory Rank Codes
+//        generateRankFactoryCode();
+    }
+
+    public static void generateRankFactoryCode() {
+        String[] Name = new String[] {
+                "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King", "Ace"
+        };
+
+        String[] NAME = new String[] {
+                "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT", "NINE", "TEN", "JACK", "QUEEN", "KING", "ACE"
+        };
+
+        for (int i = 0; i < Name.length; i++) {
+            System.out.println("public static Rank make_Rank_" + Name[i] + "() {");
+            System.out.println("    return new Rank(Rank.RankEnum." + NAME[i] + ");");
+            System.out.println("}");
+            System.out.println();
+        }
+
     }
 
     public static void generateRankTest() {
@@ -41,6 +62,7 @@ public class GenerateTest {
             System.out.println("assertNotEquals(" + name[i] + ", \"" + name[i] + "\");");
             System.out.println("assertEquals(" + name[i] + ", new Rank(Rank.RankEnum." + NAME[i] + "));");
             System.out.println("assertEquals(" + name[i] + ", new Rank(" + i + "));");
+            System.out.println("assertEquals(" + name[i] + ", GameFactory.make_Rank_" + Name[i] + "());");
             System.out.println();
             System.out.println(tab + tab + "// Test Rank " + NAME[i] + " clone");
             System.out.println("Rank cloned" + Name[i] + " = " + name[i] + ".clone();");

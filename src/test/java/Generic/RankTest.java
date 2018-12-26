@@ -18,6 +18,7 @@ class RankTest {
         assertNotEquals(two, "two");
         assertEquals(two, new Rank(Rank.RankEnum.TWO));
         assertEquals(two, new Rank(0));
+        assertEquals(two, GameFactory.make_Rank_Two());
 
         // Test Rank TWO clone
         Rank clonedTwo = two.clone();
@@ -43,6 +44,7 @@ class RankTest {
         assertNotEquals(three, "three");
         assertEquals(three, new Rank(Rank.RankEnum.THREE));
         assertEquals(three, new Rank(1));
+        assertEquals(three, GameFactory.make_Rank_Three());
 
         // Test Rank THREE clone
         Rank clonedThree = three.clone();
@@ -68,6 +70,7 @@ class RankTest {
         assertNotEquals(four, "four");
         assertEquals(four, new Rank(Rank.RankEnum.FOUR));
         assertEquals(four, new Rank(2));
+        assertEquals(four, GameFactory.make_Rank_Four());
 
         // Test Rank FOUR clone
         Rank clonedFour = four.clone();
@@ -93,6 +96,7 @@ class RankTest {
         assertNotEquals(five, "five");
         assertEquals(five, new Rank(Rank.RankEnum.FIVE));
         assertEquals(five, new Rank(3));
+        assertEquals(five, GameFactory.make_Rank_Five());
 
         // Test Rank FIVE clone
         Rank clonedFive = five.clone();
@@ -118,6 +122,7 @@ class RankTest {
         assertNotEquals(six, "six");
         assertEquals(six, new Rank(Rank.RankEnum.SIX));
         assertEquals(six, new Rank(4));
+        assertEquals(six, GameFactory.make_Rank_Six());
 
         // Test Rank SIX clone
         Rank clonedSix = six.clone();
@@ -143,6 +148,7 @@ class RankTest {
         assertNotEquals(seven, "seven");
         assertEquals(seven, new Rank(Rank.RankEnum.SEVEN));
         assertEquals(seven, new Rank(5));
+        assertEquals(seven, GameFactory.make_Rank_Seven());
 
         // Test Rank SEVEN clone
         Rank clonedSeven = seven.clone();
@@ -168,6 +174,7 @@ class RankTest {
         assertNotEquals(eight, "eight");
         assertEquals(eight, new Rank(Rank.RankEnum.EIGHT));
         assertEquals(eight, new Rank(6));
+        assertEquals(eight, GameFactory.make_Rank_Eight());
 
         // Test Rank EIGHT clone
         Rank clonedEight = eight.clone();
@@ -193,6 +200,7 @@ class RankTest {
         assertNotEquals(nine, "nine");
         assertEquals(nine, new Rank(Rank.RankEnum.NINE));
         assertEquals(nine, new Rank(7));
+        assertEquals(nine, GameFactory.make_Rank_Nine());
 
         // Test Rank NINE clone
         Rank clonedNine = nine.clone();
@@ -218,6 +226,7 @@ class RankTest {
         assertNotEquals(ten, "ten");
         assertEquals(ten, new Rank(Rank.RankEnum.TEN));
         assertEquals(ten, new Rank(8));
+        assertEquals(ten, GameFactory.make_Rank_Ten());
 
         // Test Rank TEN clone
         Rank clonedTen = ten.clone();
@@ -243,6 +252,7 @@ class RankTest {
         assertNotEquals(jack, "jack");
         assertEquals(jack, new Rank(Rank.RankEnum.JACK));
         assertEquals(jack, new Rank(9));
+        assertEquals(jack, GameFactory.make_Rank_Jack());
 
         // Test Rank JACK clone
         Rank clonedJack = jack.clone();
@@ -268,6 +278,7 @@ class RankTest {
         assertNotEquals(queen, "queen");
         assertEquals(queen, new Rank(Rank.RankEnum.QUEEN));
         assertEquals(queen, new Rank(10));
+        assertEquals(queen, GameFactory.make_Rank_Queen());
 
         // Test Rank QUEEN clone
         Rank clonedQueen = queen.clone();
@@ -293,6 +304,7 @@ class RankTest {
         assertNotEquals(king, "king");
         assertEquals(king, new Rank(Rank.RankEnum.KING));
         assertEquals(king, new Rank(11));
+        assertEquals(king, GameFactory.make_Rank_King());
 
         // Test Rank KING clone
         Rank clonedKing = king.clone();
@@ -318,6 +330,7 @@ class RankTest {
         assertNotEquals(ace, "ace");
         assertEquals(ace, new Rank(Rank.RankEnum.ACE));
         assertEquals(ace, new Rank(12));
+        assertEquals(ace, GameFactory.make_Rank_Ace());
 
         // Test Rank ACE clone
         Rank clonedAce = ace.clone();
@@ -329,7 +342,7 @@ class RankTest {
 
         System.out.println("Rank Ace tests passed.");
     }
-
+    
     @Test
     public void OtherTest() {
         assertThrows(IllegalArgumentException.class, () -> {Rank illegalRank = new Rank (-1);}, "Rank Index out of bound, must be between 0 to 12.");

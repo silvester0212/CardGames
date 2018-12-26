@@ -25,7 +25,7 @@ class SuitTest {
         assertNotEquals(spade, 3);
         assertNotEquals(spade, 'c');
         assertEquals(spade, new Suit(Suit.SuitEnum.SPADE));
-        assertEquals(spade, GameFactory.makeSpadeSuit());
+        assertEquals(spade, GameFactory.make_Suit_Spade());
         assertEquals(spade, new Suit(spade.hashCode()));
 
         // Test Spade Clone
@@ -54,7 +54,7 @@ class SuitTest {
         assertNotEquals(club, 3);
         assertNotEquals(club, 'c');
         assertEquals(club, new Suit(Suit.SuitEnum.CLUB));
-        assertEquals(club, GameFactory.makeClubSuit());
+        assertEquals(club, GameFactory.make_Suit_Club());
         assertEquals(club, new Suit(club.hashCode()));
 
         // Test Club Clone
@@ -83,7 +83,7 @@ class SuitTest {
         assertNotEquals(diamond, 3);
         assertNotEquals(diamond, 'c');
         assertEquals(diamond, new Suit(Suit.SuitEnum.DIAMOND));
-        assertEquals(diamond, GameFactory.makeDiamondSuit());
+        assertEquals(diamond, GameFactory.make_Suit_Diamond());
         assertEquals(diamond, new Suit(diamond.hashCode()));
 
         // Test Diamond Clone
@@ -112,7 +112,7 @@ class SuitTest {
         assertNotEquals(heart, 3);
         assertNotEquals(heart, 'c');
         assertEquals(heart, new Suit(Suit.SuitEnum.HEART));
-        assertEquals(heart, GameFactory.makeHeartSuit());
+        assertEquals(heart, GameFactory.make_Suit_Heart());
         assertEquals(heart, new Suit(heart.hashCode()));
 
         // Test Spade Clone
