@@ -342,7 +342,7 @@ class RankTest {
 
         System.out.println("Rank Ace tests passed.");
     }
-    
+
     @Test
     public void OtherTest() {
         assertThrows(IllegalArgumentException.class, () -> {Rank illegalRank = new Rank (-1);}, "Rank Index out of bound, must be between 0 to 12.");
